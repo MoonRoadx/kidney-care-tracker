@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'ajouter_symptome.dart';
+import 'ajouter_examen.dart';
+import 'urgence_page.dart';
 
 class AccueilPage extends StatelessWidget {
   const AccueilPage({super.key});
@@ -14,19 +17,29 @@ class AccueilPage extends StatelessWidget {
             const Text('Lanha', style: TextStyle(fontSize: 24)),
             const Text('Rein droit: 18-20%', style: TextStyle(fontSize: 18)),
             const Text('Dernier examen: ECBU (12 mars 2024)', style: TextStyle(fontSize: 16)),
+            const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const UrgencePage())),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const UrgencePage()),
+              ),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               child: const Text('Urgence'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AjouterSymptome())),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AjouterSymptome()),
+              ),
               child: const Text('Ajouter Symptôme'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AjouterExamen())),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AjouterExamen()),
+              ),
               child: const Text('Ajouter Examen'),
             ),
           ],
