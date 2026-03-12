@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'accueil_page.dart';
+import 'pages/ajouter_symptome.dart';
+import 'pages/ajouter_examen.dart';
+import 'pages/urgence_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -17,33 +21,10 @@ class KidneyCareTrackerApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'KidneyCare Tracker',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const AccueilPage(),
-    );
-  }
-}
-
-class AccueilPage extends StatelessWidget {
-  const AccueilPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('KidneyCare Tracker')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('Bienvenue', style: TextStyle(fontSize: 24)),
-            ElevatedButton(
-              onPressed: () async {
-                await FirebaseFirestore.instance.collection('test').add({'message': 'Firebase fonctionne !'});
-              },
-              child: const Text('Tester Firebase'),
-            ),
-          ],
-        ),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: const AccueilPage(),
     );
   }
 }
