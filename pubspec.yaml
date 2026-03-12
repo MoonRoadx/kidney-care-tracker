@@ -1,25 +1,47 @@
 name: kidney_care_tracker
 description: Une application Flutter pour le suivi médical des enfants avec problèmes rénaux.
 
-publish_to: 'none'
+publish_to: 'none'  # Évite de publier accidentellement le package
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.0 <3.0.0'
+  sdk: '>=2.18.0 <3.0.0'  # Version du SDK Flutter compatible
 
 dependencies:
   flutter:
     sdk: flutter
-  firebase_core: ^2.4.1
-  cloud_firestore: ^4.3.1
-  firebase_storage: ^11.0.4
-  file_picker: ^5.2.5
+  cupertino_icons: ^1.0.2  # Icônes iOS
+
+  # Firebase
+  firebase_core: ^2.4.1       # Core de Firebase
+  cloud_firestore: ^4.3.1    # Base de données Firestore
+  firebase_storage: ^11.0.4   # Stockage de fichiers
+
+  # Gestion des fichiers
+  file_picker: ^5.2.5         # Pour uploader des documents
+
+  # UI/UX
+  intl: ^0.18.1               # Pour la gestion des dates et internationalisation
+  flutter_slidable: ^2.0.0    # Pour des listes glissables (ex: supprimer un symptôme)
+  provider: ^6.0.5            # Gestion d'état simple
+
+  # Autres utilitaires
+  shared_preferences: ^2.0.15 # Stockage local simple
+  url_launcher: ^6.1.7        # Pour ouvrir des liens (ex: appeler un médecin)
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.0       # Règles de linting pour un code propre
 
 flutter:
-  uses-material-design: true
+  uses-material-design: true  # Active les icônes Material Design
+
+  # Ajoutez ici vos polices ou assets personnalisés si nécessaire
+  # fonts:
+  #   - family: YourFont
+  #     fonts:
+  #       - asset: fonts/YourFont.ttf
+  # assets:
+  #   - assets/images/
