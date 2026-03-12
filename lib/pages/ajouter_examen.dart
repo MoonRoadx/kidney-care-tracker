@@ -30,7 +30,6 @@ class _AjouterExamenState extends State<AjouterExamen> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Examen enregistré avec succès!')),
         );
-        Navigator.pop(context);
       }
     }
   }
