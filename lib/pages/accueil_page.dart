@@ -7,7 +7,7 @@ class AccueilPage extends StatelessWidget {
   const AccueilPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('KidneyCare Tracker')),
       body: Center(
@@ -19,27 +19,33 @@ class AccueilPage extends StatelessWidget {
             const Text('Dernier examen: ECBU (12 mars 2024)', style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const UrgencePage()),
-              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const UrgencePage()),
+                );
+              },
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               child: const Text('Urgence'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const AjouterSymptome()),
-              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AjouterSymptome()),
+                );
+              },
               child: const Text('Ajouter Symptôme'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const AjouterExamen()),
-              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AjouterExamen()),
+                );
+              },
               child: const Text('Ajouter Examen'),
             ),
           ],
