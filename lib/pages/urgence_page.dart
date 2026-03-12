@@ -15,7 +15,7 @@ class UrgencePage extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Ajoutez ici la logique pour appeler un numéro d'urgence
+                // Logique pour appeler un numéro d'urgence
               },
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
               child: const Text('Appeler les urgences'),
