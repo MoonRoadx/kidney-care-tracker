@@ -27,7 +27,6 @@ class _AjouterSymptomeState extends State<AjouterSymptome> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Symptôme enregistré avec succès!')),
         );
-        Navigator.pop(context);
       }
     }
   }
