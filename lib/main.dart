@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'accueil_page.dart';
-import 'pages/ajouter_symptome.dart';
-import 'pages/ajouter_examen.dart';
-import 'pages/urgence_page.dart';
+import 'pages/accueil_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -18,7 +15,7 @@ class KidneyCareTrackerApp extends StatelessWidget {
   const KidneyCareTrackerApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     return MaterialApp(
       title: 'KidneyCare Tracker',
       theme: ThemeData(
